@@ -1,0 +1,43 @@
+spring:
+  security:
+    enabled: false
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/ExamSsa_24_12?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
+    username: root
+    password:
+    jpa:
+      hibernate:
+        ddl-auto: create
+      properties:
+        hibernate:
+          show_sql: true
+          format_sql: true
+          use_sql_comments: true
+
+logging:
+  level:
+    root: info
+    com.example.rest_24_10: DEBUG
+
+custom:
+  site:
+    baseUrl: http://localhost
+
+server:
+  port: 8084
+
+tourism:
+  apiKey: "CeJoauEzAIeOq4YzhlVsroeFblOYO0gN5diYOpIasMyxprs7t1VjOJ70O9jwc6g5f6Xt7rwjSdTyQ5XmF8JeXw%3D%3D"
+
+weather:
+  apiKey: "f2f1129e95a5500d5d5bfd36fff1a9e4"
